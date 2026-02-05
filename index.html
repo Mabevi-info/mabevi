@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MABEVI | Enterprise CMS & Drupal Specialists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #334155;
+            --accent: #2563eb;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--secondary);
+            background-color: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            margin-left: 2rem;
+            font-weight: 500;
+        }
+
+        /* Hero with Background Image Overlay */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)),
+            url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 140px 10%;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.25rem; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+
+        section { padding: 100px 10%; }
+
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 2.2rem; color: var(--primary); }
+
+        /* Grid & Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content { padding: 30px; }
+        .card-content h3 { margin-bottom: 15px; color: var(--primary); }
+
+        /* Banner for Expertise */
+        .expertise-banner {
+            background: var(--light);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .expertise-text { flex: 1; padding: 60px 10%; min-width: 300px; }
+        .expertise-image {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .contact-box {
+            background: var(--primary);
+            color: white;
+            padding: 60px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        footer {
+            padding: 40px 10%;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">MABEVI Info</div>
+    <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <h1>MABEVI Info</h1>
+    <p>Strategic IT Consultancy specializing in Enterprise CMS Architectures. We deliver secure, scalable, and high-performance Drupal solutions for complex organizational needs.</p>
+</header>
+
+<section id="services">
+    <div class="section-title">
+        <h2>Our Core Specializations</h2>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Corporate" class="card-img">
+            <div class="card-content">
+                <h3>Corporate CMS</h3>
+                <p>Building centralized content hubs for global corporations, focusing on workflow automation and cross-departmental governance.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&q=80&w=600" alt="Government" class="card-img">
+            <div class="card-content">
+                <h3>Governmental Systems</h3>
+                <p>Developing secure, compliant, and accessible digital infrastructure for public sector entities and government agencies.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" alt="Code" class="card-img">
+            <div class="card-content">
+                <h3>Drupal Architecture</h3>
+                <p>Expert-level Drupal implementation, including custom module development, migrations, and complex third-party API integrations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="expertise" class="expertise-banner">
+    <div class="expertise-text">
+        <h2>Proven Expertise</h2>
+        <p style="margin-top: 20px;">MABEVI provides high-level technical oversight for organizations that require absolute stability. Our approach combines modern development practices with a deep understanding of legacy integration, ensuring your CMS is both future-proof and reliable.</p>
+    </div>
+    <div class="expertise-image"></div>
+</section>
+
+<section id="contact">
+    <div class="contact-box">
+        <h2>Partner With Us</h2>
+        <p style="margin: 20px 0 40px; opacity: 0.8;">Available for technical vetting, consultancy, and enterprise-scale projects.</p>
+        <div style="font-size: 1.2rem;">
+            <p><strong>Email:</strong> info@mabevi.com</p>
+            <p><strong>Location:</strong> Zagreb, Croatia, EU</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 MABEVI Info. All Rights Reserved. | IT Specialists</p>
+</footer>
+
+</body>
+</html>
